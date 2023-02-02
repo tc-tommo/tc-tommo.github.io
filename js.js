@@ -59,6 +59,12 @@
         }
     }, false);
 
+    $('.app-container').addEventListener("keyup", (e) => {
+        if (e.key === "Escape") {
+          closeApp(e);
+        }
+      });
+
     document.addEventListener('click', function(e) {
         var matches = e.target.matches('.app-container__dismiss');
         if (matches) {

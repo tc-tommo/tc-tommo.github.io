@@ -146,7 +146,8 @@ h2 {
   */
 }
 .app-container__body p {
-  text-justify: distribute;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .app-container__inner {
   opacity: 0;
