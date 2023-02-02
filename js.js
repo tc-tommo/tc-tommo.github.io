@@ -59,7 +59,7 @@
         }
     }, false);
 
-    document.querySelector('.app-container').addEventListener("keyup", (e) => {
+    document.addEventListener("keyup", (e) => {
         if (e.key === "Escape") {
           closeApp(e);
         }
