@@ -72,15 +72,22 @@
         }
     }, false);
 
-    // document.addEventListener('scroll'), function(e) {
-    //     var cx = window.innerWidth  / 2,
-    //         cy = window.innerHeight / 2;
+
+    var mostrecenttile = '';
+    document.addEventListener('scroll', function(e) {
+        var cx = window.innerWidth  / 2,
+            cy = window.innerHeight / 2;
         
-    //     $(document).elementFromPoint(cx, cy).hover(
-            
-    //     );
-        
-    // }
+        elem = document.elementFromPoint(cx,cy);
+
+        if (elem.matches('.app__tile')) {
+            mostrecenttile = elem;
+            elem.classList.add('over');
+        }
+        else {
+            mostrecenttile.classList.remove('over');
+        }
+    }, false);
 
     var getIndex = function(node) {
         var children = node.parentNode.childNodes;

@@ -104,6 +104,14 @@ h2 {
   opacity: 1;
 }
 
+@media (hover: none) {
+  .portfolio-items .app__tile.over img {
+    filter: blur(1px) brightness(0.5);
+  }
+  .portfolio-items .app__tile.over .hover {
+    opacity: 1;
+  }
+}
 .title {
   font-size: 24px;
   font-weight: 800;
@@ -144,10 +152,11 @@ h2 {
   	}
   }
   */
-}
-.app-container__body p {
-  text-align: justify;
-  text-justify: inter-word;
+  /*
+  &__body p {
+      text-align: justify;
+      text-justify: inter-word;
+  }*/
 }
 .app-container__inner {
   opacity: 0;

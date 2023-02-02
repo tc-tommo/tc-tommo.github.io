@@ -97,13 +97,21 @@ h2 {
     opacity: 0;
 }
 
-.portfolio-items .app__tile:hover img {
+
+.portfolio-items .app__tile:hover img{
     filter: blur(1px) brightness(0.5);
 }
-
 .portfolio-items .app__tile:hover .hover {
     opacity: 1;
 }
+
+@media (hover: none){
+    .portfolio-items .app__tile.over {
+        img{      filter: blur(1px) brightness(0.5);}
+        .hover {opacity: 1;}
+    }
+}
+
 
 .title {
     font-size: 24px;
@@ -146,10 +154,11 @@ h2 {
 		}
 	}
 	*/
+    /*
     &__body p {
         text-align: justify;
         text-justify: inter-word;
-    }
+    }*/
 
     &__inner {
         // padding: 50px;
