@@ -146,8 +146,13 @@ h2 {
 		}
 	}
 	*/
+    &__body p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
     &__inner {
-        padding: 50px;
+        // padding: 50px;
         opacity: 0;
         transition: opacity .15s linear 0s;
         .-app-open & {

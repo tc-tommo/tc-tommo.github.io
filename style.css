@@ -145,8 +145,10 @@ h2 {
   }
   */
 }
+.app-container__body p {
+  text-justify: distribute;
+}
 .app-container__inner {
-  padding: 50px;
   opacity: 0;
   transition: opacity 0.15s linear 0s;
 }
