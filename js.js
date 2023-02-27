@@ -5,6 +5,7 @@
 
     var $body = document.body,
         $appContainer = document.querySelector('.app-container'),
+        $appContainer_header = $appContainer.querySelector('.app-container__header'),
         $appContainer_title = $appContainer.querySelector('.app-container__title'),
         $appContainer_body = $appContainer.querySelector('.app-container__body'),
         $apps = document.querySelectorAll('.app');
@@ -61,9 +62,9 @@
 
     document.addEventListener("keyup", (e) => {
         if (e.key === "Escape") {
-          closeApp(e);
+            closeApp(e);
         }
-      });
+    });
 
     document.addEventListener('click', function(e) {
         var matches = e.target.matches('.app-container__dismiss');
@@ -75,16 +76,15 @@
 
     var mostrecenttile = '';
     document.addEventListener('scroll', function(e) {
-        var cx = window.innerWidth  / 2,
+        var cx = window.innerWidth / 2,
             cy = window.innerHeight / 2;
-        
-        elem = document.elementFromPoint(cx,cy);
+
+        elem = document.elementFromPoint(cx, cy);
 
         if (elem.matches('.app__tile')) {
             mostrecenttile = elem;
             elem.classList.add('over');
-        }
-        else {
+        } else {
             mostrecenttile.classList.remove('over');
         }
     }, false);

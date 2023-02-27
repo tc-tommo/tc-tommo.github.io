@@ -1,206 +1,205 @@
 :root {
-  --bs-body-font-family: "Poppins", sans-serif;
-  --bs-body-bg: #f9f9fa;
+    --bs-body-font-family: "Poppins", sans-serif;
+    --bs-body-bg: #f9f9fa;
 }
 
 .profile {
-  margin-top: 6rem;
+    margin-top: 6rem;
 }
 
 .portrait {
-  outline: 3px solid #5779c3;
-  border: 6px solid white;
+    outline: 3px solid #5779c3;
+    border: 6px solid white;
 }
 
 h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 .social-buttons {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
 }
 
 .social-buttons tr td {
-  width: 40px;
+    width: 40px;
 }
 
 .social-buttons img {
-  width: 20px;
+    width: 20px;
 }
 
 .btn-social {
-  color: #575757;
-  transition: color 0.2s ease-in-out 0.2s;
+    color: #575757;
+    transition: color 0.2s ease-in-out 0.2s;
 }
 
 .btn-social:hover {
-  color: #3781f1;
+    color: #3781f1;
 }
 
 .download {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .d-flex {
-  transition: flex 0.15s ease-in-out;
+    transition: flex 0.15s ease-in-out;
 }
 
 .portfolio-items {
-  margin-bottom: 30vh;
-  max-width: 944px;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
+    margin-bottom: 30vh;
+    max-width: 944px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
 }
 .-app-open .portfolio-items {
-  transform: scale(0.8);
+    transform: scale(0.8);
 }
 
 .portfolio-items .app__tile {
-  left: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  transition: opacity 0.5s ease-in-out 0.2s;
-  max-width: 420px;
-  margin: 20px;
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: 0;
-  cursor: pointer;
+    left: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.5s ease-in-out 0.2s;
+    max-width: 420px;
+    margin: 20px;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 0;
+    cursor: pointer;
 }
 .portfolio-items .app__tile > * {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .portfolio-items .app__tile .hover {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  border-radius: 10px;
-  top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+    top: 0;
 }
 
 .portfolio-items .app__tile img {
-  transition: 0.15s ease-in-out;
-  filter: blur(0) brightness(1);
+    transition: 0.15s ease-in-out;
+    filter: blur(0) brightness(1);
 }
 
 .portfolio-items .app__tile .hover {
-  transition: 0.15s ease-in-out;
-  opacity: 0;
+    transition: 0.15s ease-in-out;
+    opacity: 0;
 }
 
 .portfolio-items .app__tile:hover img {
-  filter: blur(1px) brightness(0.5);
+    filter: blur(1px) brightness(0.5);
 }
 
 .portfolio-items .app__tile:hover .hover {
-  opacity: 1;
+    opacity: 1;
 }
 
 @media (hover: none) {
-  .portfolio-items .app__tile.over img {
-    filter: blur(1px) brightness(0.5);
-  }
-  .portfolio-items .app__tile.over .hover {
-    opacity: 1;
-  }
+    .portfolio-items .app__tile.over img {
+        filter: blur(1px) brightness(0.5);
+    }
+    .portfolio-items .app__tile.over .hover {
+        opacity: 1;
+    }
 }
 .title {
-  font-size: 24px;
-  font-weight: 800;
-  font-family: "Manrope", sans-serif;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: "Manrope", sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .hover .title {
-  color: white;
+    color: white;
 }
 
 .hero {
-  width: 100%;
+    width: 100%;
 }
 
 .app__holder {
-  display: none;
+    display: none;
 }
 
 .app-container {
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform-origin: top left;
-  width: 100%;
-  background-color: var(--bs-body-bg);
-  min-height: 100vh;
-  /*
-  &__content{
-  	background:red;
-  	min-height:100vh;
-  	transition:opacity .15s linear 0s;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    width: 100%;
+    background-color: var(--bs-body-bg);
+    min-height: 100vh;
+    /*
+    &__content{
+    	background:red;
+    	min-height:100vh;
+    	transition:opacity .15s linear 0s;
 
-  	.-app-open &{
-  		opacity:1;
-  	}
-  }
-  */
-  /*
-  &__body p {
-      text-align: justify;
-      text-justify: inter-word;
-  }*/
+    	.-app-open &{
+    		opacity:1;
+    	}
+    }
+    */
+    /*
+    &__body p {
+        text-align: justify;
+        text-justify: inter-word;
+    }*/
 }
 .app-container__inner {
-  opacity: 0;
-  transition: opacity 0.15s linear 0s;
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
 }
 .-app-open .app-container__inner {
-  opacity: 1;
-  transition: opacity 0.15s linear 0.15s;
+    opacity: 1;
+    transition: opacity 0.15s linear 0.15s;
 }
 .app-container__header {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
 }
 .app-container__header .title {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.5333333333);
+    color: black;
+    background-color: #fff8;
 }
-.app-container__header img, .app-container__header video {
-  border-radius: 5px 5px 0 0;
+.app-container__header img,
+.app-container__header video {
+    border-radius: 10px 10px 0 0;
 }
 .app-container__dismiss {
-  font-size: 24px;
+    font-size: 24px;
 }
 .app-container__dismiss > * {
-  pointer-events: none;
+    pointer-events: none;
 }
 .-app-open .app-container {
-  visibility: visible;
-  border-radius: 0px;
-  animation: border 0.1s ease-in-out 0s 1;
-  transition: transform 0.3s ease-in-out 0.1s, visibility 0s linear 0s;
+    visibility: visible;
+    border-radius: 0px;
+    animation: border 0.1s ease-in-out 0s 1;
+    transition: transform 0.3s ease-in-out 0.1s, visibility 0s linear 0s;
 }
 @keyframes border {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .-app-close .app-container {
-  visibility: hidden;
-  transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
 }
-
-/*# sourceMappingURL=style.css.map */
