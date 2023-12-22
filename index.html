@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="files/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -40,6 +41,16 @@
 
     <div class="portfolio-items mt-5 container text-center mb-lg-0">
         <div class="d-flex flex-wrap justify-content-center">
+            <div class="item app__tile">
+                <!--clock.mp4-->
+                <img data-lazyloaded="1" src="files/clock.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/clock.png" data-was-processed="true">
+                <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
+                    <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
+                        <div class="col-12 col-lg title text-center">Gymnastics Training Clock</div>
+                    </div>
+                </div>
+
+            </div>
             <div class="item app__tile">
                 <img data-lazyloaded="1" src="files/cycleschemevis.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/cycleschemevis.png" data-was-processed="true">
                 <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
@@ -90,6 +101,25 @@
             <div class="app__title">
                 <div class="position-absolute text-primary">
                     <div class="title no-gutters py-1 px-2 my-2 mx-2">
+                        <div class="col-12 col-lg text-start"><a href="https://clock.tommo.page">Training Clock</a></div>
+                    </div>
+                </div>
+                <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
+                    <source src="files/clock.mp4"/>
+                </video>
+            </div>
+
+            <div class="app__body">
+                <p>
+                    I created a training clock for the Edinburgh University Gymnastics Club to help track time during training sessions. It also displays upcoming events in the social/competitions calendar, which is synchronised with a central club spreadsheet. The clock is built with react and hosted using firebase.
+                </p>
+            </div>
+        </div>
+
+        <div class="app -app-2">
+            <div class="app__title">
+                <div class="position-absolute text-primary">
+                    <div class="title no-gutters py-1 px-2 my-2 mx-2">
                         <div class="col-12 col-lg text-start">Edinburgh Cycle Share</div>
                     </div>
                 </div>
@@ -100,12 +130,12 @@
 
             <div class="app__body">
                 <p>
-                    Edinburgh's transport network was disrupted significantly during the pandemic. To quantify and visualise these changes we were able to use open data of the <a href="https://edinburghcyclehire.com/open-data/historical">Edinburgh cycle share network</a>                    to make some useful insights into the extent of changes in commuter habits and cycling in the city more generally.
+                    Edinburgh's transport network was disrupted significantly during the pandemic. To quantify and visualise these changes we were able to use open data of the <a href="https://web.archive.org/web/20210928131424/https://edinburghcyclehire.com/open-data/historical">Edinburgh cycle share network</a>                    to make some useful insights into the extent of changes in commuter habits and cycling in the city more generally.
                     <br> The animated visualisation neatly illustrates some of the trends the team identified from the growth potential of leisure travel to poor cycle network connectivity between new and old town locations.</p>
             </div>
         </div>
 
-        <div class="app -app-2">
+        <div class="app -app-3">
             <div class="app__title">
                 <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
                     <source src="files/UKSD.mp4"/>
@@ -119,7 +149,7 @@
             </div>
         </div>
 
-        <div class="app -app-3">
+        <div class="app -app-4">
             <div class="app__title">
                 <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
                     <source src="files/lifi.mp4"/>
@@ -136,7 +166,7 @@
             </div>
         </div>
 
-        <div class="app -app-4">
+        <div class="app -app-5">
             <h1 class="app__title">Application 4</h1>
             <div class="app__body">
                 <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
@@ -145,7 +175,7 @@
             </div>
         </div>
 
-        <div class="app -app-5">
+        <div class="app -app-6">
             <h1 class="app__title">Application 5</h1>
             <div class="app__body">
                 <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
@@ -154,14 +184,14 @@
             </div>
         </div>
 
-        <div class="app -app-6">
+        <!-- <div class="app -app-7">
             <h1 class="app__title">Application 6</h1>
             <div class="app__body">
                 <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
                     <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum,
                     elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
