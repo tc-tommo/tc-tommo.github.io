@@ -38,7 +38,7 @@
         </div>
     </div>
     <div class="download container text-center">
-        <a class="btn btn-primary" href="https://expo.dev/artifacts/eas/jNBJfM6wxibiG3Y46Ne25x.apk" target="_blank" rel="noopener noreferrer" role="button">Download App <i class="bi bi-box2-heart-fill"></i></a>
+        <a class="btn btn-primary" onclick="redirectToApp()" target="_blank" rel="noopener noreferrer" role="button">Download App <i class="bi bi-box2-heart-fill"></i></a>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
@@ -50,6 +50,15 @@
         }
         else if (window.location.hostname === 'app.tommo.page') {
             window.location.href = '/app';
+        }
+
+        function redirectToApp() {
+            if (['iPad', 'iPhone', 'iPod'].includes(navigator.platform) || (navigator.userAgent.includes('iPhone')) || (navigator.userAgent.includes("Mac") && "ontouchend" in document)) {
+                window.location.href = 'https://youtu.be/YQrS-4Es99Q?si=r_E_dzhTHzrMj1zx&t=155';
+            }
+            else {
+                window.location.href = 'https://expo.dev/artifacts/eas/jNBJfM6wxibiG3Y46Ne25x.apk';
+            }
         }
     </script>
     
