@@ -57,6 +57,9 @@ h2 {
 }
 footer {
     margin-bottom: 5vh;
+    @media (max-width: 768px) {
+        margin-bottom: 20vh;
+    }
 }
 .-app-open .portfolio-items {
     transform: scale(0.8);
