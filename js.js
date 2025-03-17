@@ -84,7 +84,7 @@
         if (elem.matches('.app__tile')) {
             mostrecenttile = elem;
             elem.classList.add('over');
-        } else {
+        } else if (mostrecenttile) {
             mostrecenttile.classList.remove('over');
         }
     }, false);
