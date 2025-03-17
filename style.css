@@ -78,10 +78,18 @@ footer {
     background-position: 50% 50%;
     z-index: 0;
     cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .portfolio-items .app__tile > * {
     pointer-events: none;
 }
+
+.portfolio-items .app__tile:hover, .portfolio-items .app__tile.over {
+    transform: scale(1.05);    
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+
 
 .portfolio-items .app__tile .hover {
     position: absolute;
