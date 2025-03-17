@@ -26,10 +26,10 @@
     var openApp = function(e) {
         var app_bounding_rect = $appContainer.getBoundingClientRect(),
             tile_bounding_rect = e.target.getBoundingClientRect()
-        translateX = tile_bounding_rect.left + 'px',
-            translateY = tile_bounding_rect.top + 'px',
+        translateX = tile_bounding_rect.left - app_bounding_rect.left + 'px',
+            translateY = tile_bounding_rect.top - app_bounding_rect.top + 'px',
             scaleX = tile_bounding_rect.width / app_bounding_rect.width,
-            scaleY = tile_bounding_rect.height / app_bounding_rect.height;
+            scaleY = 1.4 * scaleX;
 
         app_transform = "translate3d(" + translateX + "," + translateY + ",0) scale(" + scaleX + ", " + scaleY + ")";
         $appContainer.style.transform = app_transform
