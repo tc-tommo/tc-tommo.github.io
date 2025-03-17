@@ -50,10 +50,13 @@ h2 {
 }
 
 .portfolio-items {
-    margin-bottom: 30vh;
+    margin-bottom: 10vh;
     max-width: 944px;
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
+}
+footer {
+    margin-bottom: 20vh;
 }
 .-app-open .portfolio-items {
     transform: scale(0.8);
