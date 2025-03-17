@@ -149,7 +149,7 @@ body.-app-open {
     left: 0;
     transform-origin: top left;
     width: 75%;
-    margin: 30vh 12.5% 0 12.5%;
+    margin: 20vh 12.5% 0 12.5%;
     background-color: var(--bs-body-bg);
     z-index: 1050;
     pointer-events: auto;
