@@ -142,7 +142,6 @@ footer {
     width: 100%;
 }
 
-
 body.-app-open {
     overflow: hidden;
 }
@@ -157,7 +156,8 @@ body.-app-open {
     left: 0;
     transform-origin: top left;
     width: 75%;
-    margin: 20vh 12.5% 0 12.5%;
+    max-width: 1200px;
+    margin: 20vh auto 0 auto;
     background-color: var(--bs-body-bg);
     z-index: 1050;
     pointer-events: auto;
