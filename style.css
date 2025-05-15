@@ -1,5 +1,6 @@
 :root {
-    --bs-body-font-family: "Poppins", sans-serif;
+    --bs-heading-font-family: "Cal Sans", sans-serif;
+    --bs-body-font-family: "Lato", sans-serif;
     --bs-body-bg: #f9f9fa;
 }
 
@@ -10,6 +11,10 @@
 .portrait {
     outline: 3px solid #5779c3;
     border: 6px solid white;
+}
+
+h1 {
+    font-family: var(--bs-heading-font-family);
 }
 
 h1 {
