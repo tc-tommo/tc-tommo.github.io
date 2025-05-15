@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tommo Chung</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Your compiled CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <div class="profile container justify-content-center">
+    <div class="row mx-auto" style="max-width: 570px;">
+        <div class="col-md-5 text-center">
+            <img class="portrait mr-3 rounded-circle" src="files/profile.png" alt="" style="width: 200px;">
+        </div>
+        <div class="col-md-7 align-self-center mt-3 mt-md-0">
+            <span class="details pl-2 text-md-start text-center">
+                <h1>Tommo Chung</h1>
+                <h2>5th&nbsp;Year&nbsp;Master's&nbspInformatics University&nbsp;of&nbsp;Edinburgh</h2>  
+                <table class="social-buttons mx-auto text-center text-md-start mx-md-0 mt-2">
+                    <tr>
+                        <!-- <td><a target="_blank" class="btn-social facebook ml-1 ml-md-0" href="https://fb.me/tc.tomo"><i class="bi bi-facebook"></a></td> -->
+                            
+                                <td><a target="_blank" class="btn-social linkedin" href="https://www.linkedin.com/in/tc-tommo"><i class="bi bi-linkedin"></i> </a></td>
+                                <td><a target="_blank" class="btn-social messenger ml-1 ml-md-0" href="https://m.me/tc.tommo"><i class="bi bi-messenger"></a></td>
+                            <td><a target="_blank" class="btn-social instagram" href="https://www.instagram.com/tc.tommo/"><i class="bi bi-instagram"></a></td>
+                            <td><a target="_blank" class="btn-social email" href="mailto:hello@tommo.page"><i class="bi bi-envelope-fill"></i></a></td>
+                        </tr>  
+                    </table>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="download container text-center">
+    <a class="btn btn-primary" href="cv.html" target="_blank" rel="noopener noreferrer" role="button">View CV <i class="bi bi-file-earmark-text"></i></a>
+</div>
+
+<div class="portfolio-items mt-5 container text-center mb-lg-0">
+    <div class="d-flex flex-wrap justify-content-center">
+        
+        <div class="item app__tile">
+            <img data-lazyloaded="1" src="files/clock.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/clock.png" data-was-processed="true">
+            <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
+                <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
+                    <div class="col-12 col-lg title text-center">Training Clock</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="sheet-overlay scrollable">
+    <div class="app-container d-flex">
+        <div class="app-container__inner">
+            <div class="app-container__header justify-content-end">
+                <div class="app-container__title d-flex align-items-end"></div>
+                <button class="app-container__dismiss btn btn-secondary position-absolute ml-auto" type="button">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+            </div>
+            <div class="app-container__body mx-4"></div>
+        </div>
+    </div>
+</div>
+
+<div class="app__holder">
+    
+    <div class="app -app-1">
+        <div class="app__title">
+            
+            <video autoplay class="hero" loop muted poster="images/hero-video-poster.jpg">
+                <source src="files/clock.mp4"/>
+                <img src="files/clock.png" alt="Training Clock">
+            </video>
+            
+            <div class="position-absolute text-primary">
+                <div class="title no-gutters py-1 px-2 my-2 mx-2">
+                    <div class="col-12 col-lg text-start">
+                        
+                        <a href="https://clock.tommo.page">Training Clock</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app__body">
+            <p>I created a training clock for the Edinburgh University Gymnastics Club to help track time during training sessions. It also displays upcoming events in the social/competitions calendar, which is synchronised with a central club spreadsheet. The clock is built with react and hosted using firebase.</p>
+
+        </div>
+    </div>
+    
+</div>
+    
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/open-app.js"></script>
+</body>
+</html>

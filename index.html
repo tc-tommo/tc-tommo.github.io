@@ -1,30 +1,19 @@
-<html>
+---
+layout: default
+---
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="files/favicon.png" type="image/png">
-</head>
-
-<body>
-    <div class="profile container justify-content-center">
-        <div class="row mx-auto" style="max-width: 570px;">
-            <div class="col-md-5 text-center">
-                <img class="portrait mr-3 rounded-circle" src="files/profile.png" alt="" style="width: 200px;">
-            </div>
-            <div class="col-md-7 align-self-center mt-3 mt-md-0">
-                <span class="details pl-2 text-md-start text-center">
-                    <h1>Tommo Chung</h1>
-                    <h2>5th&nbsp;Year&nbsp;Master's&nbspInformatics University&nbsp;of&nbsp;Edinburgh</h2>  
-                    <table class="social-buttons mx-auto text-center text-md-start mx-md-0 mt-2">
-                        <tr>
-                            <!-- <td><a target="_blank" class="btn-social facebook ml-1 ml-md-0" href="https://fb.me/tc.tomo"><i class="bi bi-facebook"></a></td> -->
+<div class="profile container justify-content-center">
+    <div class="row mx-auto" style="max-width: 570px;">
+        <div class="col-md-5 text-center">
+            <img class="portrait mr-3 rounded-circle" src="files/profile.png" alt="" style="width: 200px;">
+        </div>
+        <div class="col-md-7 align-self-center mt-3 mt-md-0">
+            <span class="details pl-2 text-md-start text-center">
+                <h1>Tommo Chung</h1>
+                <h2>5th&nbsp;Year&nbsp;Master's&nbspInformatics University&nbsp;of&nbsp;Edinburgh</h2>  
+                <table class="social-buttons mx-auto text-center text-md-start mx-md-0 mt-2">
+                    <tr>
+                        <!-- <td><a target="_blank" class="btn-social facebook ml-1 ml-md-0" href="https://fb.me/tc.tomo"><i class="bi bi-facebook"></a></td> -->
                             
                                 <td><a target="_blank" class="btn-social linkedin" href="https://www.linkedin.com/in/tc-tommo"><i class="bi bi-linkedin"></i> </a></td>
                                 <td><a target="_blank" class="btn-social messenger ml-1 ml-md-0" href="https://m.me/tc.tommo"><i class="bi bi-messenger"></a></td>
@@ -36,188 +25,66 @@
             </div>
         </div>
     </div>
-    <div class="download container text-center">
-        <a class="btn btn-primary" href="cv.html" target="_blank" rel="noopener noreferrer" role="button">View CV <i class="bi bi-file-earmark-text"></i></a>
+</div>
+
+<div class="download container text-center">
+    <a class="btn btn-primary" href="cv.html" target="_blank" rel="noopener noreferrer" role="button">View CV <i class="bi bi-file-earmark-text"></i></a>
+</div>
+
+<div class="portfolio-items mt-5 container text-center mb-lg-0">
+    <div class="d-flex flex-wrap justify-content-center">
+        {% for project in site.projects %}
+        <div class="item app__tile">
+            <img data-lazyloaded="1" src="{{ project.thumbnail }}" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="{{ project.thumbnail }}" data-was-processed="true">
+            <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
+                <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
+                    <div class="col-12 col-lg title text-center">{{ project.title }}</div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
+</div>
 
-    <div class="portfolio-items mt-5 container text-center mb-lg-0">
-        <div class="d-flex flex-wrap justify-content-center">
-            <div class="item app__tile">
-                <!--clock.mp4-->
-                <img data-lazyloaded="1" src="files/clock.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/clock.png" data-was-processed="true">
-                <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
-                    <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
-                        <div class="col-12 col-lg title text-center">Gymnastics Training Clock</div>
-                    </div>
-                </div>
-
+<div class="sheet-overlay scrollable">
+    <div class="app-container d-flex">
+        <div class="app-container__inner">
+            <div class="app-container__header justify-content-end">
+                <div class="app-container__title d-flex align-items-end"></div>
+                <button class="app-container__dismiss btn btn-secondary position-absolute ml-auto" type="button">
+                    <i class="bi bi-x-circle"></i>
+                </button>
             </div>
-            <div class="item app__tile">
-                <img data-lazyloaded="1" src="files/cycleschemevis.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/cycleschemevis.png" data-was-processed="true">
-                <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
-                    <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
-                        <div class="col-12 col-lg title text-center">Edinburgh Cycle Share</div>
-                    </div>
-                </div>
-            </div>
-            <div class="item app__tile">
-                <img data-lazyloaded="1" src="files/uksd-tile.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/uksd-tile.png" data-was-processed="true">
-                <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
-                    <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
-                        <div class="col-12 col-lg title text-center">UK Shuffle Dance</div>
-                    </div>
-                </div>
-            </div>
-            <div class="item app__tile">
-                <img data-lazyloaded="1" src="files/lifi-tile.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/uksd-tile.png" data-was-processed="true">
-                <div class="overlay hover align-items-center align-items-lg-end justify-content-center justify-content-lg-start">
-                    <div class="align-items-center text-center text-md-start no-gutters py-md-3 px-md-4">
-                        <div class="col-12 col-lg title text-center">Visible Light Communications</div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="item app__tile">
-                <img data-lazyloaded="1" src="files/storyapps-1-768x576.png" class="img-fluid blocks-thumb portfolio-thumb litespeed-loaded" data-src="files/storyapps-1-768x576.png" data-was-processed="true"> </div> -->
+            <div class="app-container__body mx-4"></div>
         </div>
     </div>
+</div>
 
-    <div class="sheet-overlay scrollable">
-        <div class="app-container d-flex">
-            <div class="app-container__inner">
-                <div class="app-container__header justify-content-end">
-                    <div class="app-container__title d-flex align-items-end"></div>
-                    <button class="app-container__dismiss btn btn-secondary position-absolute ml-auto" type="button">
-                        <i class="bi bi-x-circle"></i>
-                    </button>
-                </div>
-                <div class="app-container__body mx-4"></div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="app__holder">
-        <div class="app -app-1">
-            <div class="app__title">
-                <div class="position-absolute text-primary">
-                    <div class="title no-gutters py-1 px-2 my-2 mx-2">
-                        <div class="col-12 col-lg text-start"><a href="https://clock.tommo.page">Training Clock</a></div>
+<div class="app__holder">
+    {% for project in site.projects %}
+    <div class="app -app-{{ forloop.index }}">
+        <div class="app__title">
+            {% if project.video %}
+            <video autoplay class="hero" loop muted poster="{{ project.poster }}">
+                <source src="{{ project.video }}"/>
+                <img src="{{ project.thumbnail }}" alt="{{ project.title }}">
+            </video>
+            {% endif %}
+            <div class="position-absolute text-primary">
+                <div class="title no-gutters py-1 px-2 my-2 mx-2">
+                    <div class="col-12 col-lg text-start">
+                        {% if project.link %}
+                        <a href="{{ project.link }}">{{ project.title }}</a>
+                        {% else %}
+                        {{ project.title }}
+                        {% endif %}
                     </div>
                 </div>
-                <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
-                    <source src="files/clock.mp4"/><img src="files/clock.png" alt="Training Clock">
-                </video>
-            </div>
-
-            <div class="app__body">
-                <p>
-                    I created a training clock for the Edinburgh University Gymnastics Club to help track time during training sessions. It also displays upcoming events in the social/competitions calendar, which is synchronised with a central club spreadsheet. The clock is built with react and hosted using firebase.
-                </p>
             </div>
         </div>
-
-        <div class="app -app-2">
-            <div class="app__title">
-                <div class="position-absolute text-primary">
-                    <div class="title no-gutters py-1 px-2 my-2 mx-2">
-                        <div class="col-12 col-lg text-start">Edinburgh Cycle Share</div>
-                    </div>
-                </div>
-                <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
-                    <source src="files/cycleshare.mp4"/><img src="files/cycleschemevis.png" alt="Edinburgh Cycle Share">
-                </video>
-            </div>
-
-            <div class="app__body">
-                <p>
-                    Edinburgh's transport network was disrupted significantly during the pandemic. To quantify and visualise these changes we were able to use open data of the <a href="https://web.archive.org/web/20210928131424/https://edinburghcyclehire.com/open-data/historical">Edinburgh cycle share network</a>                    to make some useful insights into the extent of changes in commuter habits and cycling in the city more generally.
-                    <br> The animated visualisation neatly illustrates some of the trends the team identified from the growth potential of leisure travel to poor cycle network connectivity between new and old town locations.</p>
-            </div>
+        <div class="app__body">
+            {{ project.content }}
         </div>
-
-        <div class="app -app-3">
-            <div class="app__title">
-                <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
-                    <source src="files/UKSD.mp4"/><img src="files/uksd-tile.png" alt="UK Shuffle Dance">
-                </video>
-            </div>
-            <div class="app__body">
-                <p>Beginning from a small gathering every Sunday on the streets of London, <strong>UKSD</strong> (UK Shuffle Dance) quickly grew to become the cultural nexus for a group of talented and diverse self-taught dancers that spanned the entire
-                    country, who sought and found community in dancing. The group now invites dancers internationally to attend meetups and teach and we have become a integrated part of an increasingly international community.
-                    <br><a href="https://tc-tommo.github.io/ukshuffledance.github.io/" target="_blank" rel="noopener noreferrer">The website</a> I created is an important step for the group in building a professional presence for our network of dancers
-                    and legitimising how we dance beyond an <a href="https://youtu.be/KQ6zr6kCPj8" target="_blank" rel="noopener noreferrer"><em>internet fad</em></a> as a unique and fundamentally cosmopolitan dance style.</p>
-                 </div>
-        </div>
-
-        <div class="app -app-4">
-            <div class="app__title">
-                <video autoplay="" class="hero" loop="" muted="" poster="images/hero-video-poster.jpg">
-                    <source src="files/lifi.mp4"/><img src="files/lifi-tile.png" alt="Visible Light Communications">
-                </video>
-            </div>
-            <div class="app__body">
-                <p>I was awarded the Scottish Baccalaureate for Science for investigating visible light as a medium for carrying super-fast wireless data. I built my own wireless message relay to demonstrate the concept and presented this at a seminar for
-                    new ideas in science.
-                    <ul>
-                        <li>Highest graded Baccalaureate for the Angus district 2019 </li>
-                        <li>Combined aspects of C, Arduino programming, signal processing, analogue electronics, and telecoms all of which I learned independently</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-
-        <div class="app -app-5">
-            <h1 class="app__title">Application 4</h1>
-            <div class="app__body">
-                <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                    <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum,
-                    elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-            </div>
-        </div>
-
-        <div class="app -app-6">
-            <h1 class="app__title">Application 5</h1>
-            <div class="app__body">
-                <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                    <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum,
-                    elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-            </div>
-        </div>
-
-        <!-- <div class="app -app-7">
-            <h1 class="app__title">Application 6</h1>
-            <div class="app__body">
-                <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                    <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum,
-                    elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-            </div>
-        </div> -->
-
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js" integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
-
-    <script src="js.js"></script>
-    <script type="text/javascript">
-        if (window.location.hostname === 'cv.tommo.page') {
-            window.location.href = '/cv';
-        }
-        if (window.location.hostname === 'app.tommo.page') {
-            window.location.href = '/app';
-        }
-    </script>
-
-    <script src="https://tommo.page/ringmaster/webring.js"></script>
-    <footer>
-        <div class="webring-nav text-center mt-0 mb-5">
-            <button id="webring-prev" class="btn btn-outline-secondary">⏮</button>
-            <button id="webring-next" class="btn btn-outline-secondary">⏭</button>
-        </div>
-    </footer>    
-</body>
-
-</html>
+    {% endfor %}
+</div>

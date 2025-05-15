@@ -1,0 +1,25 @@
+title: Tommo Chung
+description: Personal portfolio website
+baseurl: ""
+url: "https://tommo.page"
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag 
+
+sass:
+  style: compressed
+  load_paths:
+    - _sass

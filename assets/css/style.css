@@ -1,0 +1,210 @@
+:root {
+  --bs-heading-font-family: "Cal Sans", sans-serif;
+  --bs-body-font-family: "Lato", sans-serif;
+  --bs-body-bg: #f9f9fa;
+}
+
+.profile {
+  margin-top: 6rem;
+}
+
+.portrait {
+  outline: 3px solid #5779c3;
+  border: 6px solid white;
+}
+
+h1 {
+  font-family: var(--bs-heading-font-family);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+.social-buttons {
+  font-size: 1.4rem;
+}
+.social-buttons tr td {
+  width: 40px;
+}
+.social-buttons img {
+  width: 20px;
+}
+
+.btn-social {
+  color: #575757;
+  transition: color 0.2s ease-in-out 0.2s;
+}
+.btn-social:hover {
+  color: #3781f1;
+}
+
+.download {
+  margin-top: 100px;
+}
+
+.d-flex {
+  transition: flex 0.15s ease-in-out;
+}
+
+.portfolio-items {
+  margin-bottom: 10vh;
+  max-width: 944px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.portfolio-items .app__tile {
+  left: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.5s ease-in-out 0.2s;
+  max-width: 420px;
+  margin: 20px;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 0;
+  cursor: pointer;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.portfolio-items .app__tile > * {
+  pointer-events: none;
+}
+.portfolio-items .app__tile:hover, .portfolio-items .app__tile.over {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
+}
+.portfolio-items .app__tile .hover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+  top: 0;
+  transition: 0.15s ease-in-out;
+  opacity: 0;
+}
+.portfolio-items .app__tile img {
+  transition: 0.15s ease-in-out;
+  filter: blur(0) brightness(1);
+}
+.portfolio-items .app__tile:hover img {
+  filter: blur(1px) brightness(0.5);
+}
+.portfolio-items .app__tile:hover .hover {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .portfolio-items .app__tile.over img {
+    filter: blur(1px) brightness(0.5);
+  }
+  .portfolio-items .app__tile.over .hover {
+    opacity: 1;
+  }
+}
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.hover .title {
+  color: white;
+}
+
+.hero {
+  width: 100%;
+}
+
+body.-app-open {
+  overflow: hidden;
+}
+
+.app__holder {
+  display: none;
+}
+
+.app-container {
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  width: 75%;
+  max-width: 1200px;
+  margin: 20vh auto 0 auto;
+  background-color: var(--bs-body-bg);
+  z-index: 1050;
+  pointer-events: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .app-container {
+    width: 90%;
+    margin: 0 5% 0 5%;
+    margin-top: 20vh;
+  }
+}
+.app-container__inner {
+  border-radius: 12px;
+}
+.app-container__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.app-container__header .title {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5333333333);
+}
+.app-container__header img, .app-container__header video {
+  border-radius: 10px 10px 0 0;
+}
+.app-container__dismiss {
+  font-size: 24px;
+}
+.app-container__dismiss > * {
+  pointer-events: none;
+}
+
+.-app-open .app-container {
+  visibility: visible;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out 0.1s, visibility 0s linear 0s;
+}
+.-app-open .portfolio-items {
+  transform: scale(0.8);
+}
+
+.-app-close .app-container {
+  visibility: hidden;
+  transition: transform 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+}
+
+.sheet-overlay {
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out 0s;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1040;
+}
+.sheet-overlay.scrollable {
+  overflow-y: scroll;
+}
+
+.-app-open .sheet-overlay {
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
