@@ -1,8 +1,7 @@
 ---
 title: Training Clock
-thumbnail: files/clock.png
-video: files/clock.mp4
-poster: images/hero-video-poster.jpg
+thumbnail: assets/images/clock.png
+video: assets/videos/clock.mp4
 link: https://clock.tommo.page
 ---
 
