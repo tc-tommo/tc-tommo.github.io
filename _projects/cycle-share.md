@@ -1,6 +1,7 @@
 ---
 title: Edinburgh Cycle Share Analysis
 thumbnail: assets/images/cycle-share.png
+video: assets/videos/cycle-share.mp4
 link: https://redd.it/mrbvvt
 ---
 

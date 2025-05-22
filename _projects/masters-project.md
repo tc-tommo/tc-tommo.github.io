@@ -1,6 +1,6 @@
 ---
 title: Masters Project - Graphically Editable Music Transformations
-thumbnail: files/masters-project.png
+thumbnail: assets/images/masters-project.png
 link: 
 ---
 
